@@ -2,7 +2,7 @@
 
 Aplicación de aula para registrar pedidos desde un formulario web y guardarlos en `Datos.csv` y MySQL.
 
-El informe completo listo para completar está en `ENTREGA_UNIDAD_2_COMPLETA.docx`; el borrador en Markdown está en `ENTREGA_UNIDAD_2.md`. Para regenerar el Word en Windows, ejecuta `./generar-entrega.ps1` desde PowerShell.
+Demo pública del formulario: [https://dylandzkm.github.io/arquitecture/](https://dylandzkm.github.io/arquitecture/). En GitHub Pages los pedidos se guardan solo en el navegador; la versión local con Node.js es la que se conecta a MySQL y `Datos.csv`.
 
 ## Requisitos
 
