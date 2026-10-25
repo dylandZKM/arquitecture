@@ -46,3 +46,7 @@ Guarda capturas de la consola de las actividades 1, 2, 3 y 5, y del navegador pa
 ## Recorrido de un pedido
 
 El navegador envía el formulario a `POST /api/pedidos`. El servidor vuelve a validar los datos, crea un `RegistroPedido` y los inserta en MySQL dentro de una transacción. También agrega una fila correctamente escapada a `Datos.csv`; si falla una de las escrituras, intenta revertir la otra y responde con un mensaje de error.
+
+## GitHub Pages
+
+La raíz incluye `index.html` para publicar una demostración estática del formulario. Pages no ejecuta Express ni se conecta a MySQL: los pedidos de esa página se guardan únicamente en el almacenamiento local del navegador. Para probar persistencia real, ejecutar la versión Node.js con `npm start` y configurar MySQL.
