@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --verde: #173f35;
+  --verde-claro: #e8f0e9;
+  --tinta: #202a25;
+  --muted: #68736c;
+  --papel: #f3f2eb;
+  --blanco: #fff;
+  --linea: #d8ddd5;
+  --amarillo: #e5bf46;
+  --error: #a43527;
+  font-family: "DM Sans", sans-serif;
+  color: var(--tinta);
+  background: var(--papel);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--papel);
+  background-image: radial-gradient(#d7d9cf 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+}
+
+.layout {
+  width: min(1040px, calc(100% - 48px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(390px, 1fr);
+  align-items: center;
+  gap: clamp(48px, 9vw, 120px);
+  padding: 72px 0;
+}
+
+.intro { animation: aparecer 500ms ease-out both; }
+
+.eyebrow {
+  margin: 0 0 26px;
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+h1 {
+  max-width: 480px;
+  margin: 0;
+  color: var(--verde);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 800;
+  line-height: 1.03;
+}
+
+.intro-copy {
+  max-width: 350px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.nota-operativa {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 350px;
+  margin-top: 58px;
+  padding-top: 18px;
+  border-top: 1px solid #cdd2c9;
+}
+
+.nota-operativa p {
+  margin: 0;
+  color: #59645d;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.indicador {
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--amarillo);
+  box-shadow: 0 0 0 4px #e8dfbe;
+}
+
+.formulario-panel {
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid #e0e1d8;
+  border-top: 4px solid var(--amarillo);
+  background: var(--blanco);
+  box-shadow: 0 18px 50px #173f3512;
+  animation: aparecer 600ms 100ms ease-out both;
+}
+
+.campo { min-width: 0; margin-bottom: 21px; }
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 13px;
+  border: 1px solid var(--linea);
+  border-radius: 3px;
+  outline: none;
+  background: #fff;
+  color: var(--tinta);
+  font: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+input:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px #173f351a;
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--verde);
+  color: #fff;
+  font: 700 14px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+button:hover { background: #235849; }
+button:active { transform: translateY(1px); }
+button:focus-visible { outline: 3px solid var(--amarillo); outline-offset: 3px; }
+button:disabled { opacity: 0.65; cursor: wait; }
+button span { color: var(--amarillo); font-size: 20px; }
+
+.mensaje {
+  min-height: 20px;
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mensaje.exito { color: var(--verde); }
+.mensaje.error { color: var(--error); }
+
+.pie-formulario {
+  margin: 19px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #eceee9;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .layout {
+    width: min(520px, calc(100% - 36px));
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-content: center;
+    padding: 48px 0;
+  }
+
+  .eyebrow { margin-bottom: 17px; }
+  h1 { max-width: 420px; font-size: 46px; }
+  .intro-copy { margin-top: 16px; font-size: 15px; }
+  .nota-operativa { margin-top: 24px; }
+}
+
+@media (max-width: 420px) {
+  .layout { width: calc(100% - 28px); }
+  .fila-campos { grid-template-columns: 1fr; gap: 0; }
+  .formulario-panel { padding: 23px 19px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

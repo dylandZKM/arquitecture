@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actividad 4 | Consulta de productos</title>
+    <style>
+      body { max-width: 720px; margin: 48px auto; padding: 0 20px; color: #202a25; font: 16px/1.55 "Segoe UI", sans-serif; }
+      h1 { color: #173f35; }
+      button { padding: 12px 16px; border: 0; border-radius: 3px; background: #173f35; color: white; font: inherit; cursor: pointer; }
+      button:focus-visible { outline: 3px solid #e5bf46; outline-offset: 3px; }
+      #resultado { margin-top: 20px; padding: 16px; border-left: 4px solid #e5bf46; background: #f3f2eb; white-space: pre-line; }
+    </style>
+    <script src="actividad4-panel.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Consulta de productos</h1>
+      <p>Consulta el resumen del inventario de Coquito Amarillo.</p>
+      <button id="btnConsultar" type="button">Consultar inventario</button>
+      <p id="resultado" role="status" aria-live="polite">Pulsa el botón para mostrar el reporte.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+nombre_cliente,producto,cantidad,correo,fecha_registro
+Ana Pérez,Café tradicional,2,ana@example.com,2026-10-24T09:00:00.000Z
+Luis Gómez,Café especial,1,luis@example.com,2026-10-24T09:05:00.000Z
+María Torres,Chocolate de mesa,3,maria@example.com,2026-10-24T09:10:00.000Z
+Juan Ríos,Café descafeinado,2,juan@example.com,2026-10-24T09:15:00.000Z
+Sofía Castro,Panela orgánica,4,sofia@example.com,2026-10-24T09:20:00.000Z
+Cliente de prueba,Café,2,cliente@example.com,2026-10-24T22:51:18.537Z

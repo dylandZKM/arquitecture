@@ -1,0 +1,19 @@
+{
+  "name": "coquito-amarillo-pedidos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Registro de pedidos con persistencia en CSV y MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  }
+}
